@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <body id="homePage">
+    <div class="container">
+        <div class="contactinfo">
+            <div class="textinfo">
+                <br>
+                <p>
+                    La casserai<br>Schlossstraße 36<br>56812 Cochem<br>Germany
+                </p>
+                <p>
+                    <a href="tel:+49 2671 255" class="findcontact">+49 2671 255</a>
+                    <br>
+                    <a href="mailto:info@lacasserai.de" class="findcontact">info@lacasserai.de</a>
+                </p>
+                <p>
+                    <a href="https://goo.gl/maps/GkXsbYLS58r" target="_blank">Find us on Google Maps</a>
+                </p>
+            </div>
+        </div>
+        <div class="contactform">
+            <h3 class="text-center">Contact us</h3><br/>
+            <div class="row">
+                <div class="col-md-10" style="text-align: center; margin: 0 auto;">
+                    <form action="/post" method="post">
+                        <input class="form-control" name="name" placeholder="Name..."/><br/>
+                        <input class="form-control" name="phone" placeholder="Phone..."/><br/>
+                        <input class="form-control" name="email" placeholder="E-mail..."/><br/>
+                        <textarea class="form-control" name="text" placeholder="How can we help you?"
+                                  style="height:80px;"></textarea><br/>
+                        <input class="btn btn-primary" type="submit" value="Send"/><br/><br/>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+{% endblock %}

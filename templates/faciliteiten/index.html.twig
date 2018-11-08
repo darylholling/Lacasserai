@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <body id="facilityPage">
+    <div class="container facilitycontainer">
+        <div class="sidebar">
+            <!-- It can be fixed with bootstrap affix http://getbootstrap.com/javascript/#affix-->
+            <div id="sidebar" class="well sidebar-nav">
+                <h5 class="text-center">
+                    <b>Facilities and services</b>
+                </h5>
+                <ul class="facilityMenu">
+                    <li><a href="#">Check-in & check-out</a></li>
+                    <li><a href="#">Room Facilities</a></li>
+                    <li><a href="#">Parking</a></li>
+                    <li><a href="#">Food & beverages</a></li>
+                    <li><a href="#">Buisiness services</a></li>
+                    <li><a href="#">Concierge</a></li>
+                    <li><a href="#">Fitness</a></li>
+                    <li><a href="#">Family & pets</a></li>
+                    <li><a href="#">TV channels</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="bulletpoints">
+            <h2 class="text-center">Facilities and services</h2>
+            <img src="{{ asset('images/containerfacbg.jpg') }}" class="containerfacbg">
+            <ul>
+                <li>24-hour reception</li>
+                <li>Check-in possible after 15.00</li>
+                <li>Latest check-out by 12.00</li>
+                <li>Breakfast buffet from 06.30-10.30</li>
+                <li>Lunch from 11.00 to 15.00</li>
+                <li>Dinner from 17.30 to 22.30</li>
+                <li>Bar</li>
+                <li>Room service</li>
+                <li>Allergy friendly rooms</li>
+                <li>Rooms with connecting doors</li>
+                <li>Air conditioning in all rooms</li>
+                <li>Coffee and tea facilities in all rooms</li>
+                <li>Free Wi-Fi in all rooms</li>
+                <li>Fitness Center</li>
+                <li>Lounge with open fire</li>
+                <li>Business lounge with free Wi-Fi</li>
+                <li>Six conference rooms</li>
+                <li>Free WiFi in meeting rooms, lobby and restaurants</li>
+                <li>Wake-up call</li>
+                <li>Sightseeing</li>
+                <li>Car hire</li>
+                <li>Bicycle hire</li>
+                <li>Laundry and dry cleaning</li>
+                <li>Option to borrow a fridge for the room</li>
+                <li>Own parking space</li>
+            </ul>
+        </div>
+
+    </div>
+    </body>
+{% endblock %}

@@ -1,0 +1,370 @@
+body#LoginForm {
+    background-image: url("https://hdwallsource.com/img/2014/9/blur-26347-27038-hd-wallpapers.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 10px;
+}
+
+.form-heading {
+    color: #fff;
+    font-size: 23px;
+}
+
+.panel h2 {
+    color: #444444;
+    font-size: 18px;
+    margin: 0 0 8px 0;
+}
+
+.panel p {
+    color: #777777;
+    font-size: 14px;
+    margin-bottom: 30px;
+    line-height: 24px;
+}
+
+.login-form .form-control {
+    background: #f7f7f7 none repeat scroll 0 0;
+    border: 1px solid #d4d4d4;
+    border-radius: 4px;
+    font-size: 14px;
+    height: 50px;
+    line-height: 50px;
+}
+
+.main-div {
+    background: #ffffff none repeat scroll 0 0;
+    border-radius: 25px;
+    margin: 10px auto 30px;
+    max-width: 38%;
+    padding: 50px 70px 70px 71px;
+}
+
+.login-form .form-group {
+    margin-bottom: 10px;
+}
+
+.login-form {
+    text-align: center;
+}
+
+.forgot a {
+    color: #777777;
+    font-size: 14px;
+    text-decoration: underline;
+}
+
+.login-form .btn.btn-primary {
+    background: #f0ad4e none repeat scroll 0 0;
+    border-color: #f0ad4e;
+    color: #ffffff;
+    font-size: 14px;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    padding: 0;
+}
+
+.remember {
+    text-align: left;
+}
+
+.forgot {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.login-form .btn.btn-primary.reset {
+    background: #ff9900 none repeat scroll 0 0;
+}
+
+.back {
+    text-align: left;
+    margin-top: 10px;
+}
+
+.back a {
+    color: #444444;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.margintop {
+    margin-top: 5%;
+}
+
+/*Register*/
+input div .form-control {
+    background: #f7f7f7 none repeat scroll 0 0;
+    border: 1px solid #d4d4d4;
+    border-radius: 4px;
+    font-size: 14px;
+    height: 50px;
+    line-height: 50px;
+}
+
+.position-center {
+    margin: 0 auto;
+}
+
+/* TOP HEADER
+-------------------------------------------------- */
+
+.navbar.top-bar {
+    border-radius: 0;
+    padding: 16px 0;
+    z-index: 16;
+}
+
+.navbar-toggler {
+    border: 1px solid black;
+    color: black;
+    position: absolute;
+    right: 21px;
+}
+
+.sps {
+    padding: 1em .5em;
+    /*position: fixed;*/
+    top: 0;
+    left: 0;
+    transition: all 0.25s ease;
+    width: 100%;
+}
+
+.sps--abv {
+    background-color: transparent;
+    color: #000;
+}
+
+.sps--blw {
+    background-color: #fff;
+    color: #fff;
+}
+
+.top-bar a.navbar-brand {
+    color: black;
+    font-size: 26px;
+    font-weight: 800;
+    padding: 5px 0 0 10px;
+    text-transform: uppercase;
+}
+
+.sps--blw.top-bar a.navbar-brand {
+    color: #000;
+}
+
+.top-bar a.navbar-brand span {
+    color: #0297ff;
+}
+
+.top-bar .nav-link {
+    color: black;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 12px 18px !important;
+}
+
+.sps--blw.top-bar .nav-link {
+    color: #000
+}
+
+.top-bar .navbar-nav .nav-item {
+    margin: 0
+}
+
+.top-bar .nav-link:hover, .top-bar .nav-item.active a {
+    color: black;
+    border-bottom: 2px solid black;
+    border-radius: 0;
+}
+
+.sps--blw.top-bar .nav-link:hover, .sps--blw.top-bar .nav-item.active a {
+    color: #0297ff;
+    border-bottom: none;
+    border-radius: 0;
+}
+
+/*Homepage*/
+body#homePage {
+    /*background-image: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/time-lapse-cochem-castle-rhineland-palatinate-germany_zj8uoljnh__F0000.png");*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10px;
+    background-image: url(../images/cochumcastleOPAC.png);
+}
+
+body#homePage::after {
+    opacity: 0.5;
+}
+
+/*Contactpage*/
+.textinfo {
+    margin: auto;
+    width: 50%;
+}
+
+.contactinfo {
+    background-color: white;
+    height: 270px;
+    width: 250px;
+    margin-top: 10%;
+    box-shadow: 10px 10px 17px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    float: left;
+}
+
+.findcontact {
+    color: black;
+    text-decoration: none;
+}
+
+.contactform {
+    box-shadow: 10px 10px 17px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    background-color: white;
+    height: 420px;
+    float: right;
+    width: 400px;
+    margin-top: 10%;
+}
+
+/*Facilitypage*/
+body#facilityPage {
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10px;
+    background-image: url(../images/facBG.png);
+}
+
+.facilitycontainer {
+    background-color: #ebe8e5;
+    height: 1000px;
+    width: 80%;
+    margin-bottom: 5%;
+    border-radius: 25px;
+}
+
+.sidebar {
+    width: 20%;
+    height: 250px;
+    float: left;
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+.bulletpoints {
+    width: 65%;
+    height: 250px;
+    float: right;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.facilityMenu {
+    list-style: none;
+    width: 100%;
+}
+
+ul.facilityMenu li a {
+    color: #666;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.containerfacbg {
+    width: 90%;
+    border-radius: 25px;
+}
+
+.bulletpoints ul {
+    column-count: 2;
+    list-style-type: none;
+    margin-top: 5%;
+    padding-bottom: 5%;
+    border-bottom: 1px solid white;
+}
+
+div.bulletpoints ul li:before {
+    content: "\2022";
+    margin-right: .5em;
+}
+
+.well {
+    margin-top: 5%;
+}
+
+/*Omgevingspagina*/
+body#omgevingPage {
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10px;
+    background-image: url(../images/castleBG.png);
+}
+
+.card-product:after {
+    content: "";
+    display: table;
+    clear: both;
+    visibility: hidden;
+}
+
+.card-product .price-new, .card-product .price {
+    margin-right: 5px;
+}
+
+.card-product .price-old {
+    color: #999;
+}
+
+.card-product .img-wrap {
+    border-radius: 3px 3px 0 0;
+    overflow: hidden;
+    position: relative;
+    height: 220px;
+    text-align: center;
+}
+
+.card-product .img-wrap img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.card-product .info-wrap {
+    overflow: hidden;
+    padding: 15px;
+    border-top: 1px solid #eee;
+}
+
+.card-product .action-wrap {
+    padding-top: 4px;
+    margin-top: 4px;
+}
+
+.card-product .bottom-wrap {
+    padding: 15px;
+    border-top: 1px solid #eee;
+}
+
+.card-product .title {
+    margin-top: 0;
+}
+
+.card {
+    border: none !important;
+}
+
+/*Stars*/
+span.stars, span.stars span {
+    display: block;
+    background: url(../images/stars.png) 0 -16px repeat-x;
+    width: 80px;
+    height: 16px;
+}
+
+span.stars span {
+    background-position: 0 0;
+}

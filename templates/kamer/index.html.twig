@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Kamer index{% endblock %}
+
+{% block body %}
+    <div class="container">
+
+        <h1 class="text-center">Kamer index</h1>
+
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>SoortId</th>
+                <th>Prijs</th>
+                {#<th>Images</th>#}
+                <th>actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for kamer in kamers %}
+                <tr>
+                    <td>{{ kamer.id }}</td>
+                    <td>{{ kamer.soortId }}</td>
+                    <td>{{ kamer.prijs }}</td>
+                    {#<td>{{ kamer.images }}</td>#}
+                    <td>
+                        <a href="{{ path('kamer_show', {'id': kamer.id}) }}">show</a>
+                        <a href="{{ path('kamer_edit', {'id': kamer.id}) }}">edit</a>
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="4">no records found</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+        {% if is_granted('ROLE_ADMIN') %}
+            <a href="{{ path('kamer_new') }}">Create new</a>
+        {% endif %}
+    </div>
+
+{% endblock %}

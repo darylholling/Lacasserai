@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Bankcard{% endblock %}
+
+{% block body %}
+    <h1>Bankcard</h1>
+
+    <table class="table">
+        <tbody>
+        <tr>
+            <th>Id</th>
+            <td>{{ bankcard.id }}</td>
+        </tr>
+        {% if is_granted('ROLE_ADMIN') %}
+            <tr>
+                <th>Username</th>
+                <td>{{ bankcard.userId }}</td>
+            </tr>
+        {% endif %}
+        <tr>
+            <th>Accountnr</th>
+            <td>{{ bankcard.accountnr }}</td>
+        </tr>
+        <tr>
+            <th>Bank</th>
+            <td>{{ bankcard.bank }}</td>
+        </tr>
+        <tr>
+            <th>Cardnr</th>
+            <td>{{ bankcard.cardnr }}</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('bankcard_index') }}">back to list</a>
+
+    <a href="{{ path('bankcard_edit', {'id': bankcard.id}) }}">edit</a>
+
+    {{ include('bankcard/_delete_form.html.twig') }}
+{% endblock %}

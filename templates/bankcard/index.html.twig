@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Bankcard index{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+
+{% endblock %}
+{% block body %}
+<body style="background-color: lightblue;">
+
+<h1 class="text-center">Bankcard index</h1>
+    <div class="container">
+
+        <table id="myTable" class="table table-striped display">
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Accounthouder</th>
+                <th>Accountnr</th>
+                <th>Bank</th>
+                <th>Cardnr</th>
+                <th>actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for bankcard in bankcards %}
+                <tr>
+                    <td>{{ bankcard.id }}</td>
+                    <td>{{ bankcard.userId }}</td>
+                    <td>{{ bankcard.accountnr }}</td>
+                    <td>{{ bankcard.bank }}</td>
+                    <td>{{ bankcard.cardnr }}</td>
+                    <td>
+                        <a href="{{ path('bankcard_show', {'id': bankcard.id}) }}">show</a>
+                        <a href="{{ path('bankcard_edit', {'id': bankcard.id}) }}">edit</a>
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="5">no records found</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        {% if is_granted('ROLE_ADMIN') %}
+            <a href="{{ path('bankcard_new') }} " class="text-center">Create new</a>
+        {% endif %}
+    </div>
+
+{% endblock %}
+{% block scripts %}
+    <script src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#myTable').DataTable();
+        });
+    </script>
+{% endblock %}

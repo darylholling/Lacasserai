@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Omgeving{% endblock %}
+
+{% block body %}
+    <h1>Omgeving</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ omgeving.id }}</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>{{ omgeving.name }}</td>
+            </tr>
+            <tr>
+                <th>Omschrijving</th>
+                <td>{{ omgeving.omschrijving }}</td>
+            </tr>
+            <tr>
+                <th>Imagepath</th>
+                <td>{{ omgeving.imagepath }}</td>
+            </tr>
+            <tr>
+                <th>Rating</th>
+                <td>{{ omgeving.rating }}</td>
+            </tr>
+            <tr>
+                <th>Location</th>
+                <td>{{ omgeving.location }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('omgeving_index') }}">back to list</a>
+
+    <a href="{{ path('omgeving_edit', {'id': omgeving.id}) }}">edit</a>
+
+    {{ include('omgeving/_delete_form.html.twig') }}
+{% endblock %}

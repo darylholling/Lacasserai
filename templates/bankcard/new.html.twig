@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Bankcard{% endblock %}
+
+{% block body %}
+    <h1 class="text-center">Create new Bankcard</h1>
+    <div class="container">
+
+        {{ include('bankcard/_form.html.twig') }}
+
+    <a href="{{ path('bankcard_index') }}" >back to list</a>
+    </div>
+{% endblock %}

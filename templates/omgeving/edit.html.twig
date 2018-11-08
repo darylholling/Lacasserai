@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Omgeving{% endblock %}
+
+{% block body %}
+    <h1 class="text-center">Edit Omgeving</h1>
+    <div class="container">
+
+        {{ include('omgeving/_form.html.twig', {'button_label': 'Update'}) }}
+
+        <a href="{{ path('omgeving_index') }}">back to list</a>
+
+        {{ include('omgeving/_delete_form.html.twig') }}
+    </div>
+{% endblock %}

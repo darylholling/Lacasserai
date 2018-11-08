@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Omgeving index{% endblock %}
+
+{% block body %}
+    <body id="omgevingPage">
+    <div class="container">
+        <h1 class="text-center">Omgeving</h1>
+
+        <div class="row">
+            {% for omgeving in omgevings %}
+                <div class="col-md-4">
+                    <figure class="card card-product">
+                        <div class="img-wrap">
+                            <h4 class="position-center">{{ omgeving.name }}</h4>
+                            <img src="{{ asset('uploads/brochures/' ~ omgeving.imagepath) }}" width="100%">
+                            <img src="https://www.roughguides.com/wp-content/uploads/2014/12/Bike-3_Uli-Stanciu-660x420.jpg">
+                        </div>
+                        <figcaption class="info-wrap">
+                            <h6 class="title text-dots">{{ omgeving.omschrijving }}</h6>
+                            <div class="action-wrap">
+                                <a href="{{ path('omgeving_show', { 'id': omgeving.id }) }}"
+                                   class="btn btn-primary btn-sm float-right"> Meer info </a>
+                                <div class="price-wrap h5">
+                                    <p>
+                                        Beoordeling:
+                                    </p>
+                                    <span class="stars">{{ omgeving.rating }}</span>
+                                </div> <!-- price-wrap.// -->
+                            </div> <!-- action-wrap -->
+                        </figcaption>
+                    </figure> <!-- card // -->
+                </div> <!-- col // -->
+            {% else %}
+                <h1>no records found</h1>
+            {% endfor %}
+        </div> <!-- row.// -->
+
+    </div>
+    </body>
+{% endblock %}
+{% block scripts %}
+    <script src="{{ asset('js/js.js') }}"></script>
+    <script>
+        $(function () {
+            $('span.stars').stars();
+        });
+    </script>
+{% endblock %}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>{% block title %}La Casserai!{% endblock %}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    {% block stylesheets %}{% endblock %}
+
+    <link rel="icon" type="image/x-icon" href="{{ asset('images/favicon.ico') }}"/>
+</head>
+<nav class="navbar navbar-expand-lg mb-4 top-bar navbar-static-top sps sps--abv">
+    <div class="container">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarCollapse1" aria-controls="navbarCollapse" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand mx-auto" href="/">La<span>Casserai</span></a>
+        <div class="collapse navbar-collapse" id="navbarCollapse1">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="{{ path('default') }}">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ path('faciliteiten') }}">Faciliteiten</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="{{ path('omgeving_index') }}">Omgeving</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ path('contact') }}">Contact</a></li>
+                {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                    <a class="nav-link" href="{{ path('bankcard_index') }}">Bankcard</a>
+                    <a class="nav-link" href="{{ path('fos_user_profile_show') }}">Profile</a>
+                    <a class="nav-link" href="{{ path('fos_user_security_logout') }}">Logout</a>
+                {% else %}
+                    <a class="nav-link" href="{{ path('fos_user_security_login') }}">Login</a>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</nav>
+{% block body %}{% endblock %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    // $(function() {
+    //     var message = "Don't forget us";
+    //     var original;
+    //
+    //     $(window).focus(function() {
+    //         if (original) {
+    //             document.title = original;
+    //         }
+    //     }).blur(function() {
+    //         var title = $('title').text();
+    //         if (title != message) {
+    //             original = title;
+    //         }
+    //         document.title = message;
+    //     });
+    // });
+</script>
+{% block scripts %}{% endblock %}
+</html>
